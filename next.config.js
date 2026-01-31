@@ -8,13 +8,13 @@ const nextConfig = {
       },
     ],
   },
-  // Añadimos esto para que la web se despliegue aunque haya avisos
+  typescript: {
+    // Esto es lo más importante ahora mismo
+    ignoreBuildErrors: true,
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
 };
 
-module.exports = module.exports = nextConfig;
+module.exports = nextConfig;
