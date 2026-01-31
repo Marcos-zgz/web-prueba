@@ -1,13 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
+  },
+  // Añadimos esto para que la web se despliegue aunque haya avisos
   eslint: {
-    // Esto le dice a Vercel: "No te detengas por errores de formato"
     ignoreDuringBuilds: true,
   },
   typescript: {
-    // Esto le dice: "Sigue adelante aunque veas errores de tipos"
     ignoreBuildErrors: true,
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = module.exports = nextConfig;
